@@ -1,0 +1,54 @@
+:root{
+    --spinDuration: 200s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    background-color: #000;
+}
+
+section{
+    z-index: 3;
+    padding: 0 2rem 0 0.25rem;
+    position: fixed;
+    background-color: #444;
+    color: #fff;
+    top: 0vh;
+    left: 0vw;
+    border-bottom: 0.25rem solid #fff;
+}
+
+#canvasZ1{
+    position: fixed;
+    z-index: 1;
+}
+
+#canvasZ2{
+    position: fixed;
+    z-index: 2;
+}
+
+.spin {
+    top: -150%;
+    left: -150%;
+    -webkit-animation:spin var(--spinDuration) linear infinite;
+    -moz-animation:spin var(--spinDuration) linear infinite;
+    animation:spin var(--spinDuration) linear infinite;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
